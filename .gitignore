@@ -1,0 +1,3 @@
+.vagrant
+.bundle
+provisioners/playbook.retry
