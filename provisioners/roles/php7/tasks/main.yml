@@ -10,7 +10,7 @@
       state: present
     become: true
 
-  - name: PHP | Install composer
+  - name: PHP | Install Composer
     shell:
       curl -sS https://getcomposer.org/installer | /usr/bin/php && /bin/mv -f ./composer.phar /usr/local/bin/composer
       creates=/usr/local/bin/composer
