@@ -3,16 +3,16 @@
     service:
       name: nginx
       state: started
-      become: true
+    become: true
   
   - name: nginx-restart
     service:
       name: nginx
-      state: restarted
-      become: true
+      state: reloaded
+    become: true
   
   - name: nginx-stop
     service:
       name: nginx
       state: stopped
-      become: true
+    become: true
