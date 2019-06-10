@@ -10,12 +10,6 @@
       state: present
     become: true
 
-  - name: PHP | Install Composer
-    shell:
-      curl -sS https://getcomposer.org/installer | /usr/bin/php && /bin/mv -f ./composer.phar /usr/local/bin/composer
-      creates=/usr/local/bin/composer
-    become: true
-
   - name: PHP | Ensure listen.group is set.
     lineinfile: dest=/etc/php/7.0/fpm/pool.d/www.conf regexp='listen.group = www-data' line='listen.group = www-data' state=present
     notify: php-restart
